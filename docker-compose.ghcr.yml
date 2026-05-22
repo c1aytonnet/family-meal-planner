@@ -1,0 +1,12 @@
+services:
+  web:
+    image: ghcr.io/c1aytonnet/family-meal-planner:latest
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    env_file:
+      - .env
+    environment:
+      DATA_DIR: /saved-data
+      PORT: 3000
+    volumes:
+      - ./saved-data:/saved-data

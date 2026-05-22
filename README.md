@@ -105,6 +105,59 @@ The container listens internally on port `3000`. The external host port is confi
 
 Persistent data is mounted from `./saved-data` on the host to `/saved-data` in the container.
 
+## Docker via GHCR
+
+If a published container image is available in GitHub Container Registry, you
+can run the app without building from source.
+
+1. Copy the example env file.
+2. Start the app with the GHCR compose file.
+
+```bash
+cp .env.example .env
+mkdir -p saved-data
+docker compose -f docker-compose.ghcr.yml up -d
+```
+
+By default, this pulls:
+
+```text
+ghcr.io/c1aytonnet/family-meal-planner:latest
+```
+
+Then open:
+
+```text
+http://localhost:3000
+```
+
+To stop it later:
+
+```bash
+docker compose -f docker-compose.ghcr.yml down
+```
+
+## Manual GHCR publishing
+
+This repository is set up primarily for local Docker builds, but the image can
+also be published manually to GitHub Container Registry.
+
+Expected image name:
+
+```text
+ghcr.io/c1aytonnet/family-meal-planner:latest
+```
+
+One-time example publish flow:
+
+```bash
+echo "$GH_TOKEN" | docker login ghcr.io -u c1aytonnet --password-stdin
+docker build -t ghcr.io/c1aytonnet/family-meal-planner:latest .
+docker push ghcr.io/c1aytonnet/family-meal-planner:latest
+```
+
+The GitHub token used for publishing must have package write permissions.
+
 ## Seed data behavior
 
 The repository layer initializes the configured data directory from `./seed-data` when a collection is empty. This makes first boot usable while keeping runtime edits inside the mounted persistence directory.
