@@ -107,8 +107,10 @@ Persistent data is mounted from `./saved-data` on the host to `/saved-data` in t
 
 ## Docker via GHCR
 
-If a published container image is available in GitHub Container Registry, you
-can run the app without building from source.
+This repository includes a GitHub Actions workflow that publishes a container
+image to GitHub Container Registry from `main` and tagged releases.
+
+If the image is available, you can run the app without building from source.
 
 1. Copy the example env file.
 2. Start the app with the GHCR compose file.
@@ -140,7 +142,7 @@ docker compose -f docker-compose.ghcr.yml down
 ## Manual GHCR publishing
 
 This repository is set up primarily for local Docker builds, but the image can
-also be published manually to GitHub Container Registry.
+also be published manually to GitHub Container Registry if needed.
 
 Expected image name:
 

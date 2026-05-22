@@ -1,6 +1,8 @@
 FROM node:20-alpine AS base
 WORKDIR /app
 
+LABEL org.opencontainers.image.source="https://github.com/c1aytonnet/family-meal-planner"
+
 COPY package.json package-lock.json* ./
 RUN npm install
 
