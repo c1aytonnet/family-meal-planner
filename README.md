@@ -7,6 +7,10 @@
 
 Family Meal Planner is a production-style MVP built with Next.js App Router, TypeScript, Tailwind CSS, and a filesystem-first storage layer. It plans weekly dinners with server-side OpenAI integration while keeping recipes, family preferences, meal history, grocery lists, and AI logs in Markdown files with YAML frontmatter.
 
+## Screenshot
+
+![Family Meal Planner dashboard](public/screenshots/dashboard.png)
+
 ## Project status
 
 - MVP prototype
