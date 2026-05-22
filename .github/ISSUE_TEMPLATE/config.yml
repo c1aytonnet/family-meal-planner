@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Forking and adoption guidance
+    url: https://github.com/c1aytonnet/family-meal-planner/blob/main/CONTRIBUTING.md
+    about: This repository is an unmaintained MVP. Please read the contribution guidance before opening requests elsewhere.
+  - name: Security vulnerability reporting
+    url: https://github.com/c1aytonnet/family-meal-planner/blob/main/SECURITY.md
+    about: Please review the security policy and do not report vulnerabilities through public issues.

@@ -31,6 +31,13 @@ license is granted through this repository.
 If you want to use this project, or any derivative of it, for a commercial
 purpose, you must obtain prior written permission from Clayton Smith.
 
+## Support and reporting
+
+- Contribution guidance: see [CONTRIBUTING.md](CONTRIBUTING.md)
+- Security reporting: see [SECURITY.md](SECURITY.md)
+- This repository is shared as-is and may not receive responses to issues or
+  pull requests
+
 ## Highlights
 
 - Natural language meal planning with structured JSON output from the server
